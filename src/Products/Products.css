@@ -33,7 +33,7 @@
 }
 
 .product-card{
-    width: 23%;
+    width: 25%;
     height: 60% ;
     margin-bottom: 10vh;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 12px 24px rgba(0, 0, 0, 0.15);
@@ -100,7 +100,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:2%;
+    gap:4%;
     flex-wrap: wrap;
 }
 
