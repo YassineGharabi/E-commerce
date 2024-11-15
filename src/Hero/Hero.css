@@ -1,0 +1,92 @@
+
+.hero{
+    display: flex;
+    gap: 10%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+    width: 100%;
+    background-image: url(../assets/test.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+}
+
+.hero-info{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+
+.hero-title{
+    text-transform: uppercase;
+    word-spacing: 4%;
+    font-size: 40px;
+    animation: animatetitle 1s ease-out forwards;
+}
+
+@keyframes animatetitle {
+    0%{
+        transform: translatex(100%) ;
+    }100%{
+        transform: translatex(0%) ;
+    }
+}
+
+
+
+
+.hero-btn{
+    display: flex;
+    gap: 10px;
+    animation: animatebtn 1s ease-out forwards;
+}
+
+@keyframes animatebtn {
+    0%{
+        transform: translatey(100%) ;
+    }100%{
+        transform: translatey(0%) ;
+    }
+}
+
+.hbtn{
+    padding: 15px 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+    transition: 0.2s ease-in;
+    z-index: 2;
+}
+
+.hbtn:hover{
+    transform: scale(1.1);
+}
+
+.primary{
+    background-color: black;
+    color: white;
+}
+
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit; /* Inherits the background-image of the parent */
+    background-size: inherit;
+    background-position: inherit;
+    filter: blur(2px); /* Apply blur effect */
+    z-index: -1; /* Places the blurred background behind the content */
+}
+
+
