@@ -6,64 +6,101 @@
     letter-spacing: 2px;
 }
 
-.container{
-    padding: 0 30px;
-    margin: 0 auto;
-}
-
-
 .header{
+    width: 100%;
+    height: 12vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:  20px ;
+    box-shadow: 1px 1px 10px #eee;
+    background-color: #fff;
+    z-index: 10;
+    position: sticky;
+    top: 0;
+
 }
+
 
 .header-logo{
-    width: 20%;
+    width: 15%;
 }
 
-.logo{
+.header-logo .logo{
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     font-weight: bold;
 }
 
-.header-search{
-    width: 60%;
+
+.header-menu{
+    width: 50%;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-.header-input{
-    padding: 10px;
+.header-menu .menu{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-menu .menu .menu-item{
+    list-style: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.header-menu .menu .menu-item:hover{
+    border-bottom: 1px solid black;
+}
+
+
+.header-search{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header-search .search{
+    background-color: #eee;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+.header-search .search:hover{
+    border: 1px solid black;
+}
+
+.header-search .search .header-input{
     border: none;
     outline: none;
     background-color: #eee;
-    border-radius: 12px 0 0 12px;
-    width: 90%;
 }
 
-
-.header-btn{
-    width: 10%;
-    background-color: #000;
-    color: white;
+.header-search .search .header-btn{
     border: none;
-    padding: 10px;
-    border-radius: 0 12px 12px 0;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    outline: none;
+    background-color: #eee;
 }
 
 
 .header-icons{
-    width: 20%;
+    width: 15%;
     display: flex;
     justify-content: center;
-    gap: 3%;
-    font-size: 20px;
+    align-items: center;
+    font-size: 1.2rem;
+    gap: 1rem;
+}
+
+.header-icons .icon{
+    cursor: pointer;
+}
+
+.header-icons .icon:hover{
+    font-weight: bold;
 }

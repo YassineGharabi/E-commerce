@@ -10,10 +10,21 @@ export default function Navbar(){
             <div className="header-logo">
                 <span className="logo">E <img src={logo} alt="" className="logo-img" /> Shop</span>
             </div>
+            {/* menu items  */}
+            <div className="header-menu">
+                <ul className="menu">
+                    <li className="menu-item">Acceuil</li>
+                    <li className="menu-item">Produit</li>
+                    <li className="menu-item">A propos</li>
+                    <li className="menu-item">Nos services</li>
+                </ul>
+            </div>
             {/* search header */}
             <div className="header-search">
-                <input type="text" className="header-input" placeholder="Search...." />
-                <button className="header-btn"><IoIosSearch /></button>
+                <div className="search">
+                    <input type="text" className="header-input" placeholder="Rechercher" />
+                    <button className="header-btn"><IoIosSearch /></button>
+                </div>
             </div>
             {/* icons header */}
             <div className="header-icons">

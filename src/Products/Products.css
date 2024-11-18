@@ -1,62 +1,42 @@
 .product{
-    margin-top: 10vh;
-    width: 100%;
-    height: 100vh;
-    padding: 0 10%;
+    width: fit-content;
+    height: 85vh;
 }
 
-.product-title{
-    margin: 90px 0;
-    text-transform: capitalize;
-    position: relative;
+.product-head{
+    width: 95%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    margin: auto;
 }
 
-.product-title::after{
-    content: "";
-    position: absolute;
-    width: 44vh;
-    bottom: -10px;
-    border-radius: 60px;
-    left: 0%;
-    height: 3px;
-    background: black;
-    animation: animationproduct 2s infinite ;
+.product .product-title{
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    width: fit-content;
 }
 
-@keyframes animationproduct {
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 44vh;
-    }
+.product .product-title:hover{
+    border-bottom: 8px solid black;
 }
+
+
 
 .product-card{
-    width: 25%;
-    height: 60% ;
+    width: 23%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 10vh;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 12px 24px rgba(0, 0, 0, 0.15);
-    border-radius: 12px;
+    border-radius: 3px;
     transition: 0.4s ease-in-out ;
 }
 
-.product-card:hover{
-    transform: scale(1.1);
-}
 
-.product-card-head{
-    width: 100%;
-    height: 60% ;
-    position: relative;
-    padding: 10px;
-}
-
-.product-card-heart-icon{
-    position: absolute;
-    top: 2%;
-    right: 4%;
-}
 
 
 .product-card-img{
@@ -65,26 +45,41 @@
     border-radius: 12px;
 }
 
-.product-card-body{
-    padding: 15px 0;
-    display: flex;
-    justify-content: space-around;
-    font-weight: 600;
+.product-card:hover{
+    transform: scale(1.1);
 }
 
+
+.product-card-body{
+    width: 96%;
+    height: 75%;
+    margin: auto;
+}
+
+.product-card-body-price{
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+    width: 32%;
+}
+
+
 .product-card-foot{
+    width: 100%;
+    height: 20%;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .product-card-foot-btn{
     margin-top: 15px;
-    width: 90%;
+    width: 68%;
     padding: 15px 20px;
     background-color: #fff;
     color: #000;
     border: 0.1px #000 solid;
-    border-radius: 20px;
+    border-radius: 3px;
     font-weight: 600;
     transition: 0.3s ease-in;
     margin:10px;
@@ -97,15 +92,14 @@
 }
 
 .profuct-container{
+    width: 95%;
+    height: 80%;
+    margin: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap:4%;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.product-card-foot-rate{
-    margin: 10px;
-}
 
 

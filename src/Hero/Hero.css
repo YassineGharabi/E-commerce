@@ -1,11 +1,11 @@
 
 .hero{
     display: flex;
-    gap: 10%;
+    gap: 5%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 70vh;
+    height: 82vh;
     width: 100%;
     background-image: url(../assets/defacto.jpg);
     background-position: center;
@@ -21,6 +21,7 @@
     gap: 15px;
     flex-direction: column;
     align-items: center;
+    height: fit-content;
     width: 60%;
 }
 
@@ -39,6 +40,17 @@
     }
 }
 
+.hero-subtitle{
+    animation: animatesubtitle 1s ease-out forwards ;
+}
+
+@keyframes animatesubtitle {
+    0%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
+}
 
 
 
