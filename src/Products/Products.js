@@ -1,35 +1,25 @@
 import './Products.css';
-import { useEffect, useState } from 'react';
+import { GoArrowRight } from "react-icons/go";
+import ProductCard from '../Products/ProductCard';
+import useProductData from './DataProduct';
 export default function Product(){
-
-    const [Data,setData] = useState([]);
-    useEffect(()=>{
-        fetch('https://fakestoreapi.com/products')
-        .then((res)=>res.json())
-        .then((data)=>setData(data))
-    },[]);
-
-    
+    const data = useProductData();
+    const mainData = data.slice(0,4); 
     return(
         <main className="product">
             <div className='product-head'>
             <h2 className="product-title">SOLDES - JUSQU'À 50% DE RÉDUCTION</h2>
             </div>
         <div className='profuct-container'>  
-        {Data.map((el,index)=>{return(
-            <div className="product-card" >
-                            <div className="product-card-body">
-                            <img src={el.image} alt="" className="product-card-img" />
-                            </div>
-                            <div className="product-card-foot">
-                                <button className='product-card-foot-btn'>Ajouter au panier</button>
-                                <span className='product-card-body-price'>{el.price} $ <br/>
-                                <del>{el.price - (el.price * 0.5)} $</del>
-                                </span>
-                            </div>
-                        </div>);
+        {mainData.map((el,index)=>{return(
+            <ProductCard key={el.id} image={el.image} title={el.title} price={el.price} />
+);
             })}
-            </div> 
+            </div>
+            <div className='foot'>
+            <button className='btn'>Voir plus <GoArrowRight />
+            </button>
+            </div>
         </main>
     );
 }

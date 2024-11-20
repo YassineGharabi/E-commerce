@@ -1,0 +1,15 @@
+footer{
+    height: 50vh;
+    width: 100%;
+    background-color: #000;
+    color:#fff;
+}
+
+.footer-container{
+    height: 100%;
+    width: 95%;
+    margin: auto;
+    display: flex;
+
+    align-items: center;
+}
