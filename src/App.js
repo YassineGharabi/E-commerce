@@ -5,6 +5,8 @@ import Navbar from './Navbar/Navbar';
 import Product from './Products/Products';
 import Footer from './Footer/Footer';
 import './main.css';
+import Nosservice from './Nosservice/Nosservice';
+import Slider from './Slideer/Slider';
 
 function App() {
   return(
@@ -13,6 +15,8 @@ function App() {
     <Hero/>
     <Categorie/>
     <Product/>
+    <Slider/>
+    <Nosservice/>
     <Footer/>
     </>
 );

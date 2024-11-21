@@ -1,0 +1,67 @@
+.nosservice{
+    width: 100%;
+    height: 60vh;
+}
+
+.nosservice-container{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.nosservice-head{
+    width: 95%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.nosservice-head .nosservice-title{
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    width: fit-content;
+}
+
+.nosservice-head .nosservice-title:hover{
+    border-bottom: 8px solid black;
+}
+
+.nosservice-cards{
+    width: 80%;
+    margin: auto;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nosservice-card{
+    width: 25%;
+    height: 45%;
+    background-color: #eee;
+    border-radius: 3px;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.nosservice-card:hover{
+    border: 1px solid black;
+}
+
+.nosservice-card-title{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.nosservice-card-text{
+    font-size: 12px;
+}
+
+.nosservice-card-icon{
+    font-size: 2.5rem;
+    color: black;
+}

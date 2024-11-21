@@ -1,0 +1,29 @@
+.cont{
+    width: 100%;
+    height: 20vh;
+    margin: 20px 0;
+    overflow: hidden;
+}
+.slider{
+    height: 100%;
+    width: 200%;
+    display: flex;
+    animation: scroll 15s infinite linear;
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
+.slide-card{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
