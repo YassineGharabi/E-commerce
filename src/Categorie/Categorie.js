@@ -15,7 +15,7 @@ export default function Categorie() {
                 <h2 className="categories-title">POPULAIRE CATEGORIES</h2>
             </div>
             <div className='categories-container'>
-            {data.map((el,index)=>{
+            {data.map((el)=>{
                 return(
                     <div className='categories-card'  key={el.id} style={{backgroundImage:`url(${el.bgi})`}} >
                     <button className='categories-card-btn'>{el.namebtn} <GoArrowRight />

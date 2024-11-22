@@ -4,6 +4,10 @@ import { FaRegHeart } from "react-icons/fa";
 import { IoIosSearch } from "react-icons/io";
 import './Navbar.css';
 export default function Navbar(){
+
+    const produitAuPanier = JSON.parse(window.localStorage.getItem('qtePanier'));
+
+
     return(
         <nav className="header container">
             {/* header logo*/}
@@ -22,13 +26,14 @@ export default function Navbar(){
             {/* search header */}
             <div className="header-search">
                 <div className="search">
-                    <input type="text" className="header-input" placeholder="Rechercher" />
-                    <button className="header-btn"><IoIosSearch /></button>
+                    <input type="text" className="header-input" placeholder="Rechercher" name="search"/>
+                    <button className="header-btn" title="Rechercher"><IoIosSearch /></button>
                 </div>
             </div>
             {/* icons header */}
             <div className="header-icons">
                 <MdOutlineAddShoppingCart className="cart icon" />
+                <span className="cart-quantity">{produitAuPanier}</span>
                 <FaRegHeart className="heart icon" />
             </div>
         </nav>

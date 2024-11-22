@@ -21,7 +21,7 @@ export default function Nosservice() {
             <div className="nosservice-cards">
             {data.map((el)=>{
                 return(
-                    <div className="nosservice-card">
+                    <div className="nosservice-card" key={el.id}>
                     {el.icon}
                     <h3 className="nosservice-card-title">{el.name}</h3>
                     <p className="nosservice-card-text">{el.text}</p>
