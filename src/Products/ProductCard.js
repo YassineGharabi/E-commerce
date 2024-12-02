@@ -4,6 +4,9 @@ import useProductData from "./DataProduct";
 export default function ProductCard(props){
 
     const data = useProductData();
+
+
+
     
     async function AjouterAuPanier(id){
         //recuperer le produit
@@ -20,7 +23,6 @@ export default function ProductCard(props){
             panier = [product];
         //enregistrer le panier au localstorage
             window.localStorage.setItem('panier',JSON.stringify(panier));
-            window.localStorage.setItem('qtePanier',JSON.stringify(panier.length));
         }else{
             //si le panier n'est pas vide
             //recuperer le panier
@@ -28,11 +30,9 @@ export default function ProductCard(props){
             //ajouter le produit et oldData au panier  
             panier = [...oldData,product];
             window.localStorage.setItem('panier',JSON.stringify(panier));
-            window.localStorage.setItem('qtePanier',JSON.stringify(panier.length));
         }
     }
     
-
 
     return(
         <div className="product-card" key={props.id} >
@@ -41,7 +41,7 @@ export default function ProductCard(props){
         </div>
         <div className="product-card-foot">
             <div className='product-information'>
-            <span className='product-card-body-title'>{props.title}</span>
+            <span className='product-card-body-title'>{props.title.length > 30 ? `${props.title.slice(0,30)}...` : props.title.slice(0,30)}</span>
             <span className='product-card-body-price'>
             <del>{props.price - (props.price * 0.5)} $</del>
             {props.price} $ 

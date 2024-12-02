@@ -52,6 +52,10 @@
     cursor: pointer;
     text-transform: uppercase;
 }
+.header-menu .menu .menu-item a{
+    color: #000;
+    text-decoration: none;
+}
 
 .header-menu .menu .menu-item:hover{
     border-bottom: 1px solid black;
@@ -95,6 +99,7 @@
     align-items: center;
     font-size: 1.2rem;
     gap: 1rem;
+    /* position: relative; */
 }
 
 .header-icons .icon{

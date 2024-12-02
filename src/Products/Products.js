@@ -2,6 +2,7 @@ import './Products.css';
 import { GoArrowRight } from "react-icons/go";
 import ProductCard from '../Products/ProductCard';
 import useProductData from './DataProduct';
+import {Link} from 'react-router-dom';
 export default function Product(){
     const data = useProductData();
     const mainData = data.slice(0,4); 
@@ -17,7 +18,8 @@ export default function Product(){
             })}
             </div>
             <div className='foot'>
-            <button className='btn'>Voir plus <GoArrowRight />
+            <button className='btn'><Link to='allproduct' className='link'>
+            Voir plus <GoArrowRight /></Link>
             </button>
             </div>
         </main>
