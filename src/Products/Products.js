@@ -13,7 +13,7 @@ export default function Product(){
             </div>
         <div className='profuct-container'>  
         {mainData.map((el,index)=>{return(
-            <ProductCard key={el.id} image={el.image} title={el.title} price={el.price} id={el.id} />
+            <ProductCard key={el.id} image={el.image} title={el.title} price={el.price} id={el.id} produit={el} />
 );
             })}
             </div>

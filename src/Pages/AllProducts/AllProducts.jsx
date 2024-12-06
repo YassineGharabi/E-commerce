@@ -65,7 +65,7 @@ export default function AllProducts(){
 
     // affichage des produits
     const displayProducts = () => ( ( filtredData || [] ).map((el)=>(
-            <ProductCard key={el.id} image={el.image} title={el.title} price={el.price} id={el.id} />
+            <ProductCard key={el.id} image={el.image} title={el.title} price={el.price} id={el.id} produit={el} />
         ))
     );
 

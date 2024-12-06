@@ -6,6 +6,9 @@ import './Navbar.css';
 import { useEffect, useRef, useState  } from "react";
 import { Link } from "react-router-dom";
 import Cart from "./Cart/Cart";
+import { useDispatch, useSelector } from "react-redux";
+import { hiddenSelector } from "../stateManagment/store/productSelector";
+import { hiddenPanier } from "../stateManagment/features/productSlice";
 
 
 
@@ -14,17 +17,8 @@ import Cart from "./Cart/Cart";
 
 export default function Navbar({getSearch}){
 
-    const [openCart, setOpenCart] = useState(false);
-    const [quantity, setQuantity] = useState(0);
-    let panier = JSON.parse(window.localStorage.getItem('panier'));
-
-    useEffect(() => {
-        setQuantity(JSON.parse(window.localStorage.getItem('panier')).length);        
-    }, []);
-
-    
-
-
+    const produitStore = useSelector(hiddenSelector);
+    const dispatch = useDispatch();
 
     
     const inputValue = useRef();
@@ -33,7 +27,7 @@ export default function Navbar({getSearch}){
     }
 
     const handleOpenCart = () => {
-        setOpenCart(!openCart);
+        dispatch(hiddenPanier())
     }
 
     return(
@@ -67,9 +61,9 @@ export default function Navbar({getSearch}){
             {/* icons header */}
             <div className="header-icons">
                 <MdOutlineAddShoppingCart className="cart icon" onClick={handleOpenCart} />
-                <span className="cart-quantity"  >{quantity}</span>
+                <span className="cart-quantity"  >{produitStore.countPanier}</span>
                 <FaRegHeart className="heart icon" />
-                {openCart && <Cart panier={panier} />}
+                {produitStore.hidden && <Cart/>}
             </div>
         </nav>
     );

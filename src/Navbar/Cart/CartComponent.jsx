@@ -1,15 +1,16 @@
 import { CiBookmarkRemove } from "react-icons/ci";
+import { hiddenSelector } from "../../stateManagment/store/productSelector";
+import { useDispatch, useSelector } from "react-redux";
+import { removeProduct } from "../../stateManagment/features/productSlice";
 export default function CartComponent({image,title,price,id}){
 
+    const produitStore = useSelector(hiddenSelector);
+    const dispatch = useDispatch();
     const handleRemoveItem = (id) => {
-        let panier = JSON.parse(window.localStorage.getItem('panier'));
-        window.localStorage.removeItem('panier');
-        panier = panier.filter((el) => el.id !== id);
-        window.localStorage.setItem('panier',JSON.stringify(panier));
-    };
-    
-    const panier = JSON.parse(window.localStorage.getItem('panier'));
-    const quantite = panier.filter((el) => el.id === id).length;
+        dispatch(removeProduct({
+            id:id
+        }))
+    } 
 
 
     return (
@@ -20,7 +21,7 @@ export default function CartComponent({image,title,price,id}){
         <div className='cart-produit-info'>
             <p className="cart-produit-title">{title}</p>
             <p className="cart-produit-price">{price} $</p>
-            <p className="cart-produit-quantity">Quantité : {quantite}</p>
+            <p className="cart-produit-quantity">Quantité : {produitStore.qteProduct}</p>
         </div>
         <div className='cart-produit-remove'>
             <span >
